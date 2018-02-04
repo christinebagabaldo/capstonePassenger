@@ -7,40 +7,58 @@ import com.google.gson.annotations.SerializedName;
  */
 
 public class SignupModel {
-    private String headers;
+    @SerializedName("message")
+    private String message;
 
-    private null exception;
+    @SerializedName("email")
+    private String email;
 
-    private Original original;
+    @SerializedName("status")
+    private String status;
 
-    public String getHeaders ()
-    {
-        return headers;
+    @SerializedName("lastname")
+    private String lastname;
+
+    @SerializedName("firstname")
+    private String firstname;
+
+    public SignupModel(String message, String email, String status, String lastname, String firstname) {
+        this.message = message;
+        this.email = email;
+        this.status = status;
+        this.lastname = lastname;
+        this.firstname = firstname;
     }
 
-    public void setHeaders (String headers)
+    public String getMessage ()
     {
-        this.headers = headers;
+        return message;
     }
 
-    public null getException ()
+
+    public String getEmail ()
     {
-        return exception;
+        return email;
     }
 
-    public void setException (null exception)
+
+    public String getStatus ()
     {
-        this.exception = exception;
+        return status;
     }
 
-    public Original getOriginal ()
+
+    public String getLastname ()
     {
-        return original;
+        return lastname;
     }
 
-    public void setOriginal (Original original)
+
+
+    public String getFirstname ()
     {
-        this.original = original;
+        return firstname;
     }
+
 
 }

@@ -86,7 +86,7 @@ public class SignupActivity extends AppCompatActivity {
                 try{
                     if ("true".equals(response.body().getStatus()))
                         Log.e("success", String.valueOf(asd));
-                    Toast.makeText(getApplicationContext(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                         Toast.makeText(getApplicationContext(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
 
                 } catch (NullPointerException e){
                     //Log.e("Error", e.getMessage());
